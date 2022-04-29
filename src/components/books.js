@@ -1,18 +1,29 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable arrow-body-style */
+import { v4 as uuidv4 } from 'uuid';
 import Book from './book';
 import AddBook from './addBook';
 
 const Books = () => {
   const bookstore = [
-    'The Hunger Games',
-    'Suzanne Collin',
-    'The Hunger Games',
+    {
+      id: uuidv4(),
+      title: 'The Hunger Games',
+      authorname: 'Suzanne Collin',
+    },
+    {
+      id: uuidv4(),
+      title: 'The Hunger Games',
+      authorname: 'Suzanne Collin',
+    },
+    {
+      id: uuidv4(),
+      title: 'The Hunger Games',
+      authorname: 'Suzanne Collin',
+    },
   ];
   return (
     <div>
       {bookstore.map((e) => (
-        <Book title={e} auth="Suzanne Collins" />
+        <Book key={e.id} title={e.title} auth={e.authorname} />
       )) }
       <div>
         <AddBook />
