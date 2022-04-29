@@ -8,12 +8,6 @@
 
 - React
 
-## Live Demo ()
-
-[Live Demo Link]() (when available)
-
-![project2]()
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -45,6 +39,7 @@ npm run test
 👤 **Ifza Rasool**
 
 - GitHub: [@IfzaRasool](https://github.com/IfzaRasool)
+- linkedin: [Ifza Arain](https://www.linkedin.com/in/ifza-arain-0b922b102/)
 
 ## 🤝 Contributing
 
