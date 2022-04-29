@@ -4,10 +4,9 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import './App.css';
 import Books from './components/books';
 import Header from './components/header';
-import Home from './components/home';
+import Category from './components/category';
 
 function App() {
   return (
@@ -15,8 +14,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/books" element={<Books />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Books />} />
+          <Route path="/author" element={<Category />} />
         </Routes>
       </Router>
     </div>
