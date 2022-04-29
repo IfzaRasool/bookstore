@@ -1,23 +1,40 @@
+/* eslint-disable arrow-body-style */
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
-const Book = () => (
-  <div>
-    <p>Action</p>
-    <h1>The Hunger Games</h1>
-    <h6>Suzanne Collins</h6>
-    <ul>
-      <li>Comments</li>
-      <li>Remove</li>
-      <li>Edit</li>
-    </ul>
-    <img src="./images/progress.png" alt="progress-img" />
-    <p>64%</p>
-    <div>
-      <p>current Chapter</p>
-      <p>Chapter 17</p>
-      <button type="button">UPDATE PROGRESS</button>
+const Book = ({ title, auth }) => {
+  return (
+    <div className="book-container">
+      <div>
+        <span className="action">Action</span>
+        <h1 className="book-name">
+          {title}
+
+        </h1>
+        <h6 className="author-name">{auth}</h6>
+        <ul className="action-container">
+          <li className="comments">Comments</li>
+          <li className="remove">Remove</li>
+          <li className="edit">Edit</li>
+        </ul>
+      </div>
+      <div className="circle" />
+      <div className="per">
+        <span className="percentage">64%</span>
+        <span className="comp">Completed</span>
+      </div>
+      <div className="chapter">
+        <span className="current-chapter">CURRENT CHAPTER</span>
+        <span className="chapter-name">Chapter 17</span>
+        <button type="button" className="btn">UPDATE PROGRESS</button>
+      </div>
+
     </div>
+  );
+};
 
-  </div>
-);
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  auth: PropTypes.string.isRequired,
+};
 export default Book;

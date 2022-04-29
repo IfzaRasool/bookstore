@@ -7,6 +7,7 @@ import {
 import Books from './components/books';
 import Header from './components/header';
 import Category from './components/category';
+import AddBook from './components/addBook';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/author" element={<Category />} />
         </Routes>
       </Router>
+      <AddBook />
     </div>
   );
 }
