@@ -1,19 +1,12 @@
-
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore
+# Book store
 
->
+> "Book store" is a Single Page App (SPA) that allows users to add books with the author name and update the book progress.
 
 ## Built With
 
 - React
-
-## Live Demo ()
-
-[Live Demo Link]() (deploy on Netlify)
-
-![project2]()
 
 ## Getting Started
 
@@ -46,6 +39,7 @@ npm run test
 👤 **Ifza Rasool**
 
 - GitHub: [@IfzaRasool](https://github.com/IfzaRasool)
+- linkedin: [Ifza Arain](https://www.linkedin.com/in/ifza-arain-0b922b102/)
 
 ## 🤝 Contributing
 
