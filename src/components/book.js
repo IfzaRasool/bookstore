@@ -18,7 +18,7 @@ const Book = ({ title, auth }) => {
           <li className="edit">Edit</li>
         </ul>
       </div>
-      <div className="circle" />
+      <div className="circle-wrapper"><div className="circle-inner" /></div>
       <div className="per">
         <span className="percentage">64%</span>
         <span className="comp">Completed</span>
@@ -28,7 +28,6 @@ const Book = ({ title, auth }) => {
         <span className="chapter-name">Chapter 17</span>
         <button type="button" className="btn">UPDATE PROGRESS</button>
       </div>
-
     </div>
   );
 };

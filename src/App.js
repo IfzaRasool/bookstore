@@ -7,7 +7,6 @@ import {
 import Books from './components/books';
 import Header from './components/header';
 import Category from './components/category';
-import AddBook from './components/addBook';
 
 function App() {
   return (
@@ -16,10 +15,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Books />} />
-          <Route path="/author" element={<Category />} />
+          <Route path="/category" element={<Category />} />
         </Routes>
       </Router>
-      <AddBook />
+
     </div>
   );
 }

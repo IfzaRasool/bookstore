@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Category = () => (
-  <div>Category</div>
+  <div>
+    <button type="button" className="category-btn">Check status</button>
+  </div>
 );
 export default Category;
