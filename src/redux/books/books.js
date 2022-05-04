@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { v4 as uuidv4 } from 'uuid';
 
 const ADD_BOOKS = 'src/redux/books/addBooks';
@@ -27,7 +28,7 @@ const bookReducer = (state = initialState, action) => {
       return [
         ...state,
         {
-          id: uuidv4(),
+          id: action.id,
           title: action.title,
           authorname: action.authorname,
 
@@ -41,8 +42,9 @@ const bookReducer = (state = initialState, action) => {
   }
 };
 
-export const additem = (title, authorname) => ({
+export const additem = (id, title, authorname) => ({
   type: ADD_BOOKS,
+  id,
   title,
   authorname,
 });
