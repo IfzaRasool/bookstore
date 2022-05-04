@@ -3,7 +3,23 @@ import { v4 as uuidv4 } from 'uuid';
 const ADD_BOOKS = 'src/redux/books/addBooks';
 const REMOVE_BOOKS = 'src/redux/books/removeBooks';
 
-const initialState = [];
+const initialState = [
+  {
+    id: uuidv4(),
+    title: 'The Hunger Games',
+    authorname: 'Suzanne Collin',
+  },
+  {
+    id: uuidv4(),
+    title: 'The Hunger Games',
+    authorname: 'Suzanne Collin',
+  },
+  {
+    id: uuidv4(),
+    title: 'The Hunger Games',
+    authorname: 'Suzanne Collin',
+  },
+];
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -11,7 +27,7 @@ const bookReducer = (state = initialState, action) => {
       return [
         ...state,
         {
-          id: uuidv4(),
+          id: action.id,
           title: action.title,
           authorname: action.authorname,
 
@@ -25,8 +41,9 @@ const bookReducer = (state = initialState, action) => {
   }
 };
 
-export const additem = (title, authorname) => ({
+export const additem = (id, title, authorname) => ({
   type: ADD_BOOKS,
+  id,
   title,
   authorname,
 });

@@ -1,36 +1,48 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeitem } from '../redux/books/books';
 
-const Book = ({ title, auth }) => (
-  <div className="book-container">
-    <div>
-      <span className="action">Action</span>
-      <h1 className="book-name">
-        {title}
+const Book = ({ id, title, auth }) => {
+  const dispatch = useDispatch();
 
-      </h1>
-      <h6 className="author-name">{auth}</h6>
-      <ul className="action-container">
-        <li className="comments">Comments</li>
-        <li className="remove">Remove</li>
-        <li className="edit">Edit</li>
-      </ul>
+  const removeClick = (id) => {
+    dispatch(removeitem(id));
+  };
+
+  return (
+    <div className="book-container">
+      <div>
+        <span className="action">Action</span>
+        <h1 className="book-name">
+          {title}
+        </h1>
+        <h6 className="author-name">{auth}</h6>
+        <div className="action-container">
+          <span className="comments">Comments</span>
+          <button type="button" className="remove" id={id} onClick={() => { removeClick(id); }}>
+            remove
+          </button>
+          <span className="edit">Edit</span>
+        </div>
+      </div>
+      <div className="circle-wrapper"><div className="circle-inner" /></div>
+      <div className="per">
+        <span className="percentage">64%</span>
+        <span className="comp">Completed</span>
+      </div>
+      <div className="chapter">
+        <span className="current-chapter">CURRENT CHAPTER</span>
+        <span className="chapter-name">Chapter 17</span>
+        <button type="button" className="btn">UPDATE PROGRESS</button>
+      </div>
     </div>
-    <div className="circle-wrapper"><div className="circle-inner" /></div>
-    <div className="per">
-      <span className="percentage">64%</span>
-      <span className="comp">Completed</span>
-    </div>
-    <div className="chapter">
-      <span className="current-chapter">CURRENT CHAPTER</span>
-      <span className="chapter-name">Chapter 17</span>
-      <button type="button" className="btn">UPDATE PROGRESS</button>
-    </div>
-  </div>
-);
+  );
+};
 
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   auth: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 export default Book;
