@@ -1,25 +1,10 @@
-import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
 import Book from './book';
 import AddBook from './addBook';
 
 const Books = () => {
-  const bookstore = [
-    {
-      id: uuidv4(),
-      title: 'The Hunger Games',
-      authorname: 'Suzanne Collin',
-    },
-    {
-      id: uuidv4(),
-      title: 'The Hunger Games',
-      authorname: 'Suzanne Collin',
-    },
-    {
-      id: uuidv4(),
-      title: 'The Hunger Games',
-      authorname: 'Suzanne Collin',
-    },
-  ];
+  const bookstore = useSelector((state) => state.bookReducer);
+
   return (
     <div>
       {bookstore.map((e) => (
