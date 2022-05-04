@@ -178,6 +178,8 @@ li {
   line-height: normal;
   letter-spacing: normal;
   color: var(--cool-blue);
+  border: 0;
+  background: transparent;
 }
 
 .edit {
@@ -342,4 +344,8 @@ li {
   background-color: var(--azure);
   color: var(--white);
   font-weight: bold;
+}
+
+.category-section {
+  padding: 3rem;
 }

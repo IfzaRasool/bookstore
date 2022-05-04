@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { v4 as uuidv4 } from 'uuid';
 
 const ADD_BOOKS = 'src/redux/books/addBooks';

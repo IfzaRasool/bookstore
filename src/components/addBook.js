@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-console */
 import { v4 as uuidv4 } from 'uuid';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -15,21 +13,16 @@ const AddBook = () => {
     const bookName = e.target.value;
 
     settitle(bookName);
-    console.log(bookName);
   };
 
   const handleChange1 = (e) => {
     const author = e.target.value;
 
     setauthor(author);
-    console.log(author);
   };
 
   const submitForm = (e) => {
     e.preventDefault();
-    console.log('submitForm');
-    console.log(title);
-    console.log(author);
     const id = uuidv4();
     dispatch(additem(id, title, author));
   };

@@ -1,16 +1,17 @@
 const initialState = [];
+const CHK_STATUS = 'src/redux/categories/categoryStatus';
 
 const categoryReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'Status':
-      return 'under construction';
+    case CHK_STATUS:
+      return 'Under Construction';
     default:
       return state;
   }
 };
 
 export const categoryStatus = () => ({
-  type: 'Status',
+  type: CHK_STATUS,
 });
 
 export default categoryReducer;
