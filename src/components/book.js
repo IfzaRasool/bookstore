@@ -1,9 +1,12 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeitem } from '../redux/books/books';
 
-const Book = ({ id, title, auth }) => {
+const Book = ({
+  id, title, auth, category,
+}) => {
   const dispatch = useDispatch();
 
   const removeClick = (id) => {
@@ -13,7 +16,7 @@ const Book = ({ id, title, auth }) => {
   return (
     <div className="book-container">
       <div>
-        <span className="action">Action</span>
+        <span className="action">{category}</span>
         <h1 className="book-name">
           {title}
         </h1>
@@ -44,5 +47,6 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   auth: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 export default Book;
