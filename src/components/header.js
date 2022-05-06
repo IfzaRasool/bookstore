@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { VscAccount } from 'react-icons/vsc';
+import login from './images/login.png';
 
 const Header = () => (
   <div>
@@ -9,9 +9,7 @@ const Header = () => (
       <nav>
         <Link to="/" className="header-primary-heading">BOOKS</Link>
         <Link to="/category" className="header-secondary-heading">CATEGORIES</Link>
-        <h2 className="login">
-          <VscAccount />
-        </h2>
+        <img src={login} alt="login" />
       </nav>
     </header>
   </div>
