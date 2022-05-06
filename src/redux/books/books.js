@@ -69,7 +69,7 @@ export const createBook = (id, title, author, category) => async (dispatch) => {
 export const removeBook = (id) => async (dispatch) => {
   console.log(id);
   const result = await fetch(
-    `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/FJTfftHpycguiZ5QwrZd/books/${id}`,
+    `${BASE_URL}/${id}`,
     {
       method: 'DELETE',
       headers: {
@@ -81,25 +81,4 @@ export const removeBook = (id) => async (dispatch) => {
     dispatch(removeitem(id));
   }
 };
-// export function removeBook({ id }) {
-//   return async (dispatch) => {
-//     const result = await fetch(`${BASE_URL}/${id}`, {
-//     if (result) {
-//       dispatch({
-//         type: REMOVE_BOOKS,
-//         id,
-//       });
-//     }
-//   };
-// }
-// export const removeBook = (id) => async (dispatch) => {
-//   console.log(id);
-//   const result = await (`${BASE_URL}/${id}`);
-//   if (result) {
-//     dispatch({
-//       type: REMOVE_BOOKS,
-//       id,
-//     });
-//   }
-// };
 export default bookReducer;
