@@ -1,10 +1,7 @@
-/* eslint-disable no-console */
 import { v4 as uuidv4 } from 'uuid';
-// import http from '../../http-common';
-// import { useDispatch } from 'react-redux';
 
-const ADD_BOOKS = 'src/redux/books/addBooks';
-const REMOVE_BOOKS = 'src/redux/books/removeBooks';
+const ADD_BOOKS = 'ADD_BOOKS';
+const REMOVE_BOOKS = 'REMOVE_BOOKS';
 const BASE_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/FJTfftHpycguiZ5QwrZd/books';
 
 export const initialState = [];
@@ -47,7 +44,6 @@ export async function fetchBooks(dispatch) {
   const response = await fetch(BASE_URL);
   const data = await response.json();
   const objValues = Object.entries(data);
-  console.log(objValues);
   objValues.forEach((element) => {
     const bookId = uuidv4();
     const bookTitle = element[1][0].title;
@@ -57,8 +53,8 @@ export async function fetchBooks(dispatch) {
   });
 }
 
-export const createBook = async (id, title, author, category) => {
-  await fetch(BASE_URL, {
+export const createBook = (id, title, author, category) => async (dispatch) => {
+  const result = await fetch(BASE_URL, {
     method: 'POST',
     body: JSON.stringify({
       item_id: id,
@@ -70,7 +66,20 @@ export const createBook = async (id, title, author, category) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  console.log(id, title, author, category);
-  // dispatch(additem(id, title, author, category));
+  if (result) {
+    dispatch(additem(id, title, author, category));
+  }
+};
+
+export const removeBook = (id) => async (dispatch) => {
+  const result = await fetch(`${BASE_URL}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  if (result) {
+    dispatch(removeitem(id));
+  }
 };
 export default bookReducer;

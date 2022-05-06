@@ -1,8 +1,7 @@
-/* eslint-disable no-console */
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeitem } from '../redux/books/books';
+import { removeBook } from '../redux/books/books';
 
 const Book = ({
   id, title, auth, category,
@@ -10,7 +9,7 @@ const Book = ({
   const dispatch = useDispatch();
 
   const removeClick = (id) => {
-    dispatch(removeitem(id));
+    dispatch(removeBook(id));
   };
 
   return (
