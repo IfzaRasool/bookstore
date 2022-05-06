@@ -28,7 +28,7 @@ const Book = ({
         pathWidth={10}
         pathColor={['#0290ff', '#0290ff']} // use an array for gradient color.
         trailWidth={20}
-        trailColor="#e8e8e8" // use a string for solid color.
+        trailColor="#e8e8e8"
         textStyle={{ fill: 'white' }}
       />
     </div>
