@@ -26,12 +26,8 @@ body {
 }
 
 .container {
-  margin: 0 auto;
-  width: 85%;
+  width: 100%;
   min-height: 68.563rem;
-  border-radius: 4px;
-  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-  background-color: #fafafa;
 }
 
 .header {
@@ -95,13 +91,30 @@ nav {
 .book-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  width: 75%;
+  width: 85%;
   height: 10.625rem;
   margin: 2.313rem 6.25rem 0;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
   border-radius: 4px;
-  border: solid 1px var(--grey-border);
+  border: solid 1px #e8e8e8;
   background-color: var(--white);
+}
+
+.hr {
+  width: 0.25px;
+  height: 15px;
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+  border: solid 1px #e8e8e8;
+}
+
+.hr2 {
+  width: 0.5px;
+  height: 4rem;
+  padding: 0;
+  margin-top: -4rem;
+  margin-left: 8rem;
+  border: solid 1px #e8e8e8;
 }
 
 .action {
@@ -195,19 +208,10 @@ li {
   color: var(--cool-blue);
 }
 
-.circle-wrapper {
-  width: 4.25rem;
-  height: 4.25rem;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 50%;
-  border-color: #0290ff;
-}
-
 .circle {
-  width: 5.625rem;
-  height: 5.62rem;
-  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+  width: 6rem;
+  height: 6rem;
+  margin-left: 10rem;
 }
 
 .per {
@@ -225,6 +229,7 @@ li {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  font-family: var(--font);
   color: var(--black-two);
 }
 
@@ -300,10 +305,10 @@ li {
 }
 
 .bookname-field {
-  width: 41.5rem;
+  width: 35rem;
   height: 2.813rem;
-  margin: 1.188rem 2.125rem 0 0;
-  padding: 0.813rem 35.688rem 0.813rem 1.063rem;
+  margin: 0.5rem;
+  padding: 0.375rem 0.938rem 0.563rem 1rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: var(--white);
@@ -312,8 +317,8 @@ li {
 .author-field {
   width: 15rem;
   height: 2.813rem;
-  margin: 1.188rem 2.125rem 0;
   padding: 0.375rem 0.938rem 0.563rem 1rem;
+  margin: 1rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: var(--white);
@@ -322,7 +327,6 @@ li {
 .category-field {
   width: 14rem;
   height: 2.813rem;
-  margin: 1.188rem 2.125rem 0;
   padding: 0.375rem 0.938rem 0.563rem 1rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
