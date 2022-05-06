@@ -19,9 +19,16 @@ const AddBook = () => {
     <div className="addbook-container">
       <form onSubmit={submitForm}>
         <h1 className="add-book">ADD NEW BOOK</h1>
-        <input type="text" name="title" className="bookname-field" placeholder="Book title" required />
+        <input type="text" name="title" className="bookname-field" placeholder="Title" required />
         <input type="text" name="author" className="author-field" placeholder="Author" required />
-        <input type="text" name="category" className="author-field" placeholder="category" required />
+        <select name="category" className="category-field">
+          <option value="Categories">Categories</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Historical">Historical</option>
+        </select>
         <button type="submit" className="book-add-btn">Add Book</button>
       </form>
     </div>
