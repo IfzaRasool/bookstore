@@ -26,12 +26,8 @@ body {
 }
 
 .container {
-  margin: 0 auto;
-  width: 85%;
+  width: 100%;
   min-height: 68.563rem;
-  border-radius: 4px;
-  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-  background-color: #fafafa;
 }
 
 .header {
@@ -212,19 +208,10 @@ li {
   color: var(--cool-blue);
 }
 
-.circle-wrapper {
-  width: 4.25rem;
-  height: 4.25rem;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 50%;
-  border-color: #0290ff;
-}
-
 .circle {
-  width: 5.625rem;
-  height: 5.62rem;
-  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+  width: 6rem;
+  height: 6rem;
+  margin-left: 10rem;
 }
 
 .per {
@@ -381,4 +368,5 @@ li {
 
 .login {
   padding: 1rem;
+  color: var(--azure);
 }

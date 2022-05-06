@@ -9,10 +9,10 @@ const Header = () => (
       <nav>
         <Link to="/" className="header-primary-heading">BOOKS</Link>
         <Link to="/category" className="header-secondary-heading">CATEGORIES</Link>
+        <h2 className="login">
+          <VscAccount />
+        </h2>
       </nav>
-      <h2 className="login">
-        <VscAccount />
-      </h2>
     </header>
   </div>
 );

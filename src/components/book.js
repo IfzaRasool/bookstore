@@ -22,7 +22,7 @@ const Book = ({
         <span className="edit">Edit</span>
       </div>
     </div>
-    <div id="progressbarContainer">
+    <div className="circle">
       <Progressbar
         input={20}
         pathWidth={10}
